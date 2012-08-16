@@ -1,0 +1,37 @@
+README
+
+Configuration 
+1. The port is defined at the line number 18 in file Ravi2.cpp.
+2. Follow the inline comments in Ravi2.cpp to change the configurations.
+
+1. Uncompress the file HTTP_Proxy_final_40_57.zip.
+2. Change to directory - HOMEDIR/proxy, where HOMEDIR is the path of the directory in which the proxy is being run.
+3. In order to make the proxy server and the simulator type "make".
+4. Run the server using "./server" in the directory HOMEDIR/proxy.
+5. In order to run the simulator, use the command "./simumator" in the directory HOMEDIR/proxy.
+
+
+User Documentation:
+
+The project has been hosted at "http://goo.gl/7gRVf" (zip file HTTP_Proxy_final_40_57.zip). It contains the code for the proxy server (in the file Ravi2.cpp) and the code for a simulator in Sim.cpp. The name of the makefile is Makefile. All the cached objects are stored in the directory HOMEDIR/proxy/cacheDir.
+
+Configurations of the Network Proxy:
+
+The following configuration parameters are defined within the file Ravi2.cpp. The network proxy by default runs on the port number 5000 (defined on line number 18).
+The address of the proxy server is the local host's address. The proxy server can also be configured to server packets through a parent proxy server (currently at the line number 29 and its value is "172.16.25.44"). To enable support through the parent proxy server PARENT_PROXY (line number 28) has to be set to 1. The log of the proxy server is maintained in the file "access_log.dat". Rest of the information is mentioned in the inline comments.
+
+Configurations of the cache:
+
+The definitions of the methods for caching are in cache.cpp. Eight different caching strategies have been implemented. These have been defined in the file cache.cpp. To implement a particular caching policy specify the policy on line number 30 , file - Ravi2.cpp. 
+
+Configurations in the Simulator:
+
+The simulator we have devised reads a file to get the a list of URLs, along with their objects. This file is accessLog.txt. Each set of objects is preceeded by a parent URL. Another file (outFile) contains the ordering of all the URLs that are to be accessed. It then applies the eight eviction policies. The cache size is changed from 0 to 10^6 B in 50 uniform steps. The number of steps can be changed from line number 18. The rest can be understood by following the inline comments. The results are contained in the Result2.dat file. It gives us the size of the cache, the eviction policy, the number of misses, the total fetch latency, the total cache misses in bytes. 
+
+Code:
+The project has been hosted at "http://goo.gl/7gRVf".  For further information contact the developers:
+
+1. Ravi Tandon (ravifreek63@gmail.com)
+2. Rishav Anand (rishav.iitg@gmail.com)
+
+
